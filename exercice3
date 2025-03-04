@@ -1,0 +1,38 @@
+<!-- Exemple d'une page HTML de base -->
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Exemple HTML</title>
+	</head>
+	
+	<body style="background-color: #FF474C;">
+	
+		<a name="top"><h1>Mes itinéraires de bus préférés</h1></a>
+		<ol>
+		  <li> <a href="#61z">Le 61z </a>
+		  <li> <a href="#168">Le 168 </a>
+		  <li> <a href="#95">Le 95 </a>
+	  </ol>
+
+		<!--<img src="https://i.imgur.com/yFO2pJt.jpeg" alt="Daniel qui se tient debout heureusement devant le STADLER FLIRT qui est utiliser sur la ligne 2 en Ottawa" width="200"/> <br>-->
+		<a name="61z"><h2>1. Le 61z</h2></a> <br>
+		 
+		 <a href="https://cptdb.ca/wiki/index.php/Ottawa-Carleton_Regional_Transit_Commission_route_61_%27St-Laurent/Terry_Fox_%26_Stittsville%27"> <img src="https://i.imgur.com/7zftG0Z.jpeg" alt="Daniel sur le 61z, son bus préféré" width="200"/></a>
+		 <p>Dans cette image, je suis sur le 61z à 7h00 avec le fameux <a href="https://www.youtube.com/@TheSpicyBlueFlamingo">Breton Macdonald</a>. C'est mon itinéraire de bus préféré parce qu'il traverse tellement loin et est un des seuls bus qui rend service à Gatineau. Ce qui m'a surpris c'est que personne était sur le bus, c'était un vendredi matin. Maleureusement à partire du 3 mars, le 61 Gatineau arretera d'êxister :(</p>
+		 <p>Le premier arrêt de la ligne 61 de bus est <i>Terry Fox</i> et le dernier arrêt est <i>Eddy / Du Portage</i>. La ligne 61 (Gatineau) est en service les jours de la semaine entre 05h00 et 8h00. Le 61z comporte de 29 arrêts et la durée totale du trajet sur cet itinéraire est d'environ 57 minutes.</p>
+		 
+	  <a name="168"><h2>2. Le 168</h2></a> <br>
+		 <a href="https://cptdb.ca/wiki/index.php/Ottawa-Carleton_Regional_Transit_Commission_route_168"> <img src="https://www.ctvnews.ca/resizer/v2/3DHP3QN4Z3EKC4LYQFC6JVKHGM.jpg?smart=true&auth=188aeee049bbe72088ddb77ec0cc5cd02b2e09c90019cee65d0a0f01f75984d4&width=1200&height=630" alt="Carte de oc transpo bus 165" width="200"/></a>
+		 <p>Le premier arrêt de la ligne de bus 168 est <i>Terry Fox</i> et le dernier arrêt est <i>Fernbank / Terry Fox</i>. La ligne 168 (Bridlewood) est en service tous les jours avec une fréquance de 30 minutes.<br>Le 168 comporte 78 arrêts et la durée totale du trajet est d'environ 42 minutes. J'aime ce bus parce qu'il m'amène de ma maison au maison de ma copine en 40 minutes</p>
+		 	 
+		<a name="95"><h2>3. Le 95</h2></a> <br>
+		 <a href="https://youtube.com/watch?v=8-25Q51mwC4"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJzQw-kCWTAnSILv63cxFkHFl6HxQVOzXfGvRcUmAzDmcrmwOhiQY5Z0gKHfdF0iY4F_5nfkpasyy7vnGdrc8f-xbXJKb8bpwK510gvZRHX15AiFw7j4ZWOo5nB2whnVXMNcjCJbfXOZU/w1200-h630-p-k-no-nu/Cremer_8.JPG" alt="Photo du bus 95 direction Orleans" width="200"/></a>
+		 <p>J'ai jamais eu la chance d'aller desus mais le 95 est le meilleur bus qui ai jamais existé. La route 95 était l'une des routes les plus utilisé d'OC Transpo et était exploitée 24 heures sur 24 (entre les stations Barrhaven Centre et Place d'Orléans). Il longeait les segments est, central et sud-ouest du Transitway. Le terminus sud-ouest se trouve à Barrhaven, généralement à la station Barrhaven Centre. Le terminus Est se trouve à Orléans, généralement à la station Place d'Orléans. </p>
+		 <p><a href="#top"><i>retour en haut</i></a></p>
+	</body>
+	
+</html>
