@@ -1,85 +1,109 @@
-/*css*/
-
-body { 
-  background-color: #181612;
-  position: relative; //garde les autres avec position absulut ancré
-}
-  
-h1, h2, h3, p, ul, li, b {
-  color: beige;
-}
-
-div {
-  margin: 20px;
-  border-radius: 10px;
-}
-
-div.border {
-  position: absolute;
-  padding: 0px;
-  width: 200px;
-  height:266px;
-  border: 15px groove #8F8773;
-}
-
-div.box {
-  position: absolute;
-  height: auto;
-  padding:10px;
-  border: 15px #8F8773 ridge;
-  }
-
-div.collant {
-  position: sticky;
-  top: 10px;
-  padding: 20px;
-  background-color: #181612;
-  z-index: 1000; /* garde l'élément au dessus tout autre */
-}
-.iframely-responsive, .iframely-embed  {
-  float: right;
-  margin-bottom: 300px;
-}
-div.table {
-  position: absolute;
-  right: 15px;
-  top: 550px;
-  text-align: center;
-  
-  tr, th, td {
-    color: beige;
-  }
-}
-ul.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  width:70%;
-}
-
-li.menu {
-  float: right;
-}
-
-li a.menu {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li.menu a:hover {
-  background-color: #111;
-}
-}
-
-/*787165
-8F8773
-312F30
-181612
-030301
-*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <a name="Haut"></a>
+    <meta charset="utf-8">
+    <title>Biographie</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style> 
+    
+    </style>
+  </head>
+  <body>
+    <div class="collant">
+      <h1>Biographie</h1>
+      <h3>Daniel Ghaby</h3>
+      <ul class="menu">
+        <li class="menu"><a class="menu" href="index.html">Biographie</a></li>
+        <li class="menu"><a class="menu" href="poeme.html">Mon Poème</a></li>
+        <li class="menu"><a class="menu" href="voyage.html">Voyage Parfait</a></li>
+        <li class="menu"><a class="menu" href="#Haut">Haut</a></li>
+      </ul >
+    </div>
+    <div class="box" style="left: 10px; width: 70%; top:180px;">  
+      <p style="color: white;">
+        Mon nom est Daniel Ghaby et j'aime les systèmes de transport public. C'est pourquoi mon site web s'appelle 
+        <a style="color: #8F8773" href="https://61zFan.github.io">61zFan</a>. Je ne sais pas pourquoi, mais ça me passionne beaucoup.<br><br>
+      
+        De plus, je suis musicien et compositeur. Je joue du trombone et du piano à un niveau intermédiaire. J'ai compétitionné internationalement dans des compétitions de cube Rubik. (à voir, ci dessous)<br><br> 
+      
+        Aussi, je suis raisonnablement actif. Je suis notamment fier de ma course. Dans la compétition de cross-country 6 km, je suis fier de mon temps de 
+        <a style="color: #8F8773" href="https://dcc344ca-ec70-45b8-857b-55d92ad73f87.usrfiles.com/ugd/dcc344_0889cc7c53f3401689a052a9c8d7b71b.pdf" target="_blank">00:22:15,20</a>.<br><br>
+      </p>
+    </div>
+    <div class="border" style="right:10px;" ;>
+      <img src="https://i.imgur.com/yFO2pJt.jpeg" alt="Daniel qui se tient debout heureusement devant le STADLER FLIRT qui est utiliser sur la ligne 2 en Ottawa" width="200"/>
+    </div>
+    <!-- les 6 prochaines lignes ont été généré par https://iframely.com/try-->
+    <div class="iframely-embed">
+      <div class="iframely-responsive" style="width: 250px; margin-right: 20px; margin-top: 700px">
+        <a href="https://www.worldcubeassociation.org/persons/2023GHAB01" data-iframely-url="//iframely.net/mmWExxA?card=small"></a>
+      </div>
+    </div>
+    <script async src="//iframely.net/embed.js"></script>
+    <div class="table">
+      <table border="5px">
+        <thead>
+          <tr>
+            <th rowspan="2">Abilité</th>
+            <th rowspan="2">Maître</th>
+            <th rowspan="2">Expert</th>
+            <th rowspan="2">Intermédiaire</th>
+            <th rowspan="2">Débutant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="1">HTML</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128654;</td>
+            <td rowspan="1"></td>
+          </tr>
+          <tr>
+            <td rowspan="1">CSS</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128654;</td>
+            <td rowspan="1"></td>
+          </tr>
+          <tr>
+            <td rowspan="1">JavaScript</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128653;</td>
+          </tr>
+          <tr>
+            <td rowspan="1">Python</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128653;</td>
+          </tr>
+          <tr>
+            <td rowspan="1">Composition</td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128649;</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+          </tr>
+          <tr>
+            <td rowspan="1">Désign</td>
+            <td rowspan="1"></td>
+            <td rowspan="1">&#128649;</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+          </tr>
+          <tr>
+            <td rowspan="1">Poste Canada</td>
+            <td rowspan="1">🧑‍🏫</td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+            <td rowspan="1"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
