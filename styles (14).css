@@ -1,0 +1,59 @@
+/*css*/
+
+body { 
+  background-color: #181612;
+  position: relative; //garde les autres avec position absulut ancré
+}
+  
+h1, h2, h3, p, ul, li, b {
+  color: beige;
+}
+
+div {
+  margin: 20px;
+  border-radius: 10px;
+}
+
+div.border {
+  position: absolute;
+  padding: 0px;
+  width: 200px;
+  height:266px;
+  border: 15px groove #8F8773;
+}
+
+div.box {
+  position: absolute;
+  height: auto;
+  padding:10px;
+  border: 15px #8F8773 ridge;
+  }
+
+div.collant {
+  position: sticky;
+  top: 2px;
+  padding: 10px;
+  background-color: #181612;
+  z-index: 1000; /* garde l'élément au dessus tout autre */
+}
+.iframely-responsive, .iframely-embed  {
+  position: sticky;
+  bottom: 30px;
+}
+div.table {
+  position: absolute;
+  right: 15px;
+  top: 500px;
+  text-align: center;
+  
+  tr, th, td {
+    color: beige;
+  }
+}
+
+/*787165
+8F8773
+312F30
+181612
+030301
+*/
