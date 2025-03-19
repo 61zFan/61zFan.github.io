@@ -18,7 +18,7 @@ div.border {
   position: absolute; /* Permet de positionner précisément l'élément dans la mise en page, indépendamment des autres éléments */
   padding: 0;
   width: 200px;
-  height: 266px;
+  height: auto;
   border: 15px groove #8F8773;
 }
 
