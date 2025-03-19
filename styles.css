@@ -30,10 +30,10 @@ div.box {
   }
 
 div.collant {
-  position: sticky;
+  position: fixed;
   top: 10px;
   padding: 20px;
-  width: 90%;
+  width: 500px;
   background-color: #181612;
   z-index: 1000; /* garde l'élément au dessus tout autre */
 }
