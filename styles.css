@@ -1,11 +1,10 @@
-/*css*/
-
+/* General Styles */
 body { 
   background-color: #181612;
-  background-repeat: no;
-  position: relative; //garde les autres avec position absulut ancré
+  background-repeat: no-repeat;
+  position: relative; /* Keeps the absolute-positioned elements anchored */
 }
-  
+
 h1, h2, h3, p, ul, li, b {
   color: beige;
 }
@@ -17,48 +16,51 @@ div {
 
 div.border {
   position: absolute;
-  padding: 0px;
+  padding: 0;
   width: 200px;
-  height:266px;
+  height: 266px;
   border: 15px groove #8F8773;
 }
 
 div.box {
   position: absolute;
-  height: auto;
-  padding:10px;
-  border: 15px #8F8773 ridge;
-  }
+  padding: 10px;
+  border: 15px ridge #8F8773;
+}
 
 div.collant {
   position: sticky;
   top: 10px;
   padding: 20px;
-  width:90%;
+  width: 90%;
   background-color: #181612;
-  z-index: 1000; /* garde l'élément au dessus tout autre */
+  z-index: 1000; /* Keeps the element above others */
 }
-.iframely-responsive, .iframely-embed  {
+
+.iframely-responsive, .iframely-embed {
   float: right;
-  position:relative;
+  position: relative;
 }
+
 div.table {
   position: relative;
   left: 15px;
-  top:600px;
+  top: 600px;
   text-align: center;
-  
-  tr, th, td {
-    color: beige;
-  }
 }
+
+div.table tr, div.table th, div.table td {
+  color: beige;
+}
+
+/* Menu */
 ul.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  width:70%;
+  width: 70%;
 }
 
 li.menu {
@@ -73,15 +75,7 @@ li a.menu {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the link color on hover */
 li.menu a:hover {
   background-color: #111;
 }
-}
-
-/*787165
-8F8773
-312F30
-181612
-030301
-*/
