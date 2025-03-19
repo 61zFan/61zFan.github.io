@@ -30,7 +30,7 @@ div.box {
   }
 
 div.collant {
-  position: fixed;
+  position: sticky;
   top: 10px;
   padding: 20px;
   width: 90%;
