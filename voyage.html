@@ -6,12 +6,13 @@
     <title>Voyage de rêve</title>
     <link rel="stylesheet" href="styles.css" />
     <audio autoplay loop>
+      <!-- faible support -->
       <source src="media/starwars_naboo_suite.mp3">
     </audio>
     <style> 
       body {
         background-image: url("media/Naboo.png");
-        background-attachment: fixed;
+        background-size: cover; /* pour donner un effet similaire à «background-attachement: fixed» mais sans trop d'impacte sur la performance */
       }
     </style>
   </head>
@@ -27,14 +28,14 @@
       </ul>
     </div>
     
-    <div class="box" style="right: 450px; top:250px;">
+    <div class="box" style="right: 450px; top:250px;"> <!-- boite qui contien des descriptions sur la planete et la retraite ainsi qu'une liste de mets populaires -->
       <h2>Varykino, Lake Country, Naboo</h2>  
       <p>
-        <!--https://starwars.fandom.com/wiki/Varykino_Villa#Description-->
+          <!-- source: https://starwars.fandom.com/wiki/Varykino_Villa#Description -->
         Varykino, une retraite au bord d'un lac sur la planète Naboo qui a une histoire importante. 
-        Il appartenait à la Maison royale de Naboo et servait de refuge privé, notamment à Padmé Amidala, 
+        Il appartenait à la Maison royale de Naboo et servait de refuge privé, notamment à <i>Padmé Amidala</i>, 
         qui y a vécu avant de devenir reine, puis sénatrice. La retraite a été le lieu du mariage secret entre Padmé et Anakin Skywalker, 
-        qui deviendra plus tard Darth Vader.  <br>
+        qui deviendra plus tard <b style="color:red">Darth Vader</b>. <br>
         D'un côté de la villa, une série de marches mène à une plage privée, 
         et de l'autre côté des eaux du lac il y a une petite île qui abritait une variété d'oiseaux.<br><br>
         
@@ -42,12 +43,12 @@
         Les pièces de la villa étaient reliées par de larges couloirs de marbre et des jardins extérieurs. 
         Parmi les pièces les plus remarquables de la maison, on peut noter la salle du trône, dans laquelle les membres de la famille royale en visite pouvaient recevoir leurs invités, 
         ainsi que la salle des brumes du matin, une véranda en plein air qui surplombait le lac. 
-        Le domaine disposait de plusieurs speeders de classe Berenko en service pour le transport à travers les eaux.
+        Le domaine disposait de plusieurs speeders de classe <i>Berenko</i> en service pour le transport à travers les eaux.
         <br><br>
-        Voici une liste de mets populaires: 
+        Voici une liste de mets populaires à Naboo: 
       </p>
-      
-      <!--https://starwars.fandom.com/wiki/Category:Naboo_food -->
+    
+      <!-- source: https://starwars.fandom.com/wiki/Category:Naboo_food -->
       <ul>
         <li>Petaldown salad</li>
         <li>Redglass noodles</li>
@@ -55,18 +56,19 @@
         <li>Braised Shaak Roast</li>
         <li>Callus egg rice</li>
       </ul>
+    </div>
+
+    <!-- trois images de mets avec une bordure -->
+    <div class="border" style="left:500px;">
+      <img src="media/YlesianWhiteWorms-UltimateCookbook.webp" alt="Callus egg rice" width="200"/>
+    </div>
       
-      <div class="border" style="left:500px;">
-        <img src="media/YlesianWhiteWorms-UltimateCookbook.webp" alt="Callus egg rice" width="200"/>
-      </div>
+    <div class="border" style="left:250px;">
+      <img src="media/Five-Blossom_Bread.webp" alt="Five Blossom Bread" width="200"/>
+    </div>
       
-      <div class="border" style="left:250px;">
-        <img src="media/Five-Blossom_Bread.webp" alt="Five Blossom Bread" width="200"/>
-      </div>
-      
-      <div class="border" style="left:0px;">
-        <img src="media/Braised_Shaak_Roast_recipe.webp" alt="Ragoût de Renne" width="200"/>
-      </div>
+    <div class="border" style="left:0px;">
+      <img src="media/Braised_Shaak_Roast_recipe.webp" alt="Ragoût de Renne" width="200"/>
     </div>
     
     <div class="border" style="right:10px; width:400px; height:500px" >
