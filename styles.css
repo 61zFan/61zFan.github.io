@@ -2,7 +2,7 @@
 body { 
   background-color: #181612;
   background-repeat: no-repeat;
-  position: relative; /* Keeps the absolute-positioned elements anchored */
+  position: relative; /* Maintient les éléments positionnés en absolu ancrés à leur parent */
 }
 
 h1, h2, h3, p, ul, li, b {
@@ -10,12 +10,12 @@ h1, h2, h3, p, ul, li, b {
 }
 
 div {
-  margin: 50px;
+  margin: 50px; /* Ajoute un espace autour des éléments pour améliorer la lisibilité et éviter un aspect trop compact */
   border-radius: 10px;
 }
 
 div.border {
-  position: absolute;
+  position: absolute; /* Permet de positionner précisément l'élément dans la mise en page, indépendamment des autres éléments */
   padding: 0;
   width: 200px;
   height: 266px;
@@ -29,12 +29,12 @@ div.box {
 }
 
 div.collant {
-  position: sticky;
+  position: sticky; /* Permet de garder l'élément visible lorsqu'on fait décendre la page*/
   top: 10px;
   padding: 20px;
   width: 90%;
   background-color: #181612;
-  z-index: 1000; /* Keeps the element above others */
+  z-index: 1000; /* Maintient l'élément au-dessus des autres */
 }
 
 .iframely-responsive, .iframely-embed {
@@ -55,7 +55,7 @@ div.table tr, div.table th, div.table td {
 
 /* Menu */
 ul.menu {
-  list-style-type: none;
+  list-style-type: none; /* Supprime les puces pour un affichage plus propre et structuré du menu */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -75,7 +75,7 @@ li a.menu {
   text-decoration: none;
 }
 
-/* Change the link color on hover */
+/* Change la couleur du lien quand le curseur y raproche */
 li.menu a:hover {
   background-color: #111;
 }
