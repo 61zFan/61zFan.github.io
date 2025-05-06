@@ -110,5 +110,36 @@
             </tbody>
         </table>
     </div>
+    <div>
+        <h1>Calculatrice modulo %</h1>
+        <form>
+            <label for="input1"> Premier nombre :</label>
+            <input id="input1" type=text></input>
+            <label for="input2">Deuxième nombre :</label>
+            <input id="input2" type=text></input>
+            <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Calculer modulo">
+            <div id="divAffiche">
+                
+            </div>
+            <script>
+                var nombre1
+                var nombre2
+                function confirmeInscription() {
+                    nombre1 = parseInt(docment.getElementById("input1").value)
+                    nombre2 = parseInt(docment.getElementById("input2").value)
+                    
+                    var affiche = document.getElementById("divAffiche");
+                   
+                    //Construire le message à afficher
+                    var message = "<br><br>" + nombre1 + " % " + nombre2 + " = " + (nombre1%nombre2);
+                    
+                    //Afficher le message sur la page web
+                    affiche.innerHTML = message;
+                    return
+                }
+                console.log(nombre1, nombre2)
+            </script>
+        </form>
+    </div>
 </body>
 </html>
