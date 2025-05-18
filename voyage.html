@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <title>Voyage de rêve</title>
     <link rel="stylesheet" href="styles.css" />
-    <audio autoplay loop>
-      <!-- faible support -->
-      <source src="media/starwars_naboo_suite.mp3">
-    </audio>
+    <!-- howlerjs.com | un engine audio pour simplifier l'audio pour les jeux qui utilise le javaScripte
+    version lisible: https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.js version -->
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+    <script>
+        //source possible
+        var theme = new Howl({
+          urls: ['media/starwars_naboo_suite.mp3', 'media/starwars_naboo_suite.wav']
+        }).play();
+    </script>
     <style> 
       body {
         background-image: url("media/Naboo.png");
