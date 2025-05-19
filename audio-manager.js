@@ -7,3 +7,5 @@ function setupAudio() {
   });
   musicAudio.play();
 }
+window.setupAudio = setupAudio;
+
