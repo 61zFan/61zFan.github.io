@@ -5,5 +5,5 @@ function setupAudio() {
     autoplay: true,
     loop: true,
   });
-musicAudio.play();
+  musicAudio.play();
 }
