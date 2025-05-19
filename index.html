@@ -4,15 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Biographie</title>
+    <!-- Howler.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <script defer src="howler.min.js"></script>
-    <script defer src="audio-manager.js"></script>
-    <script>
-      // call on first user interaction
-      document.addEventListener('click', () => {
-        setupAudio();
-      }, { once: true });
-    </script>
 </head>
 <body>
     <a name="Haut"></a>
@@ -147,6 +141,37 @@
                 console.log(nombre1, nombre2)
             </script>
         </form>
+    </div>
+    <div>
+            <h1>Music Sprite Player</h1>
+    <div class="buttons">
+        <button data-sprite="intro">Intro</button>
+        <button data-sprite="verse">Verse</button>
+        <button data-sprite="chorus">Chorus</button>
+        <button data-sprite="outro">Outro</button>
+    </div class="player">
+        <script>
+            // Initialize Howler with audio sprite definitions
+            const music = new Howl({
+                src: ['audio/music.mp3'], // Place your audio file in an 'audio' folder
+                sprite: {
+                    // spriteName: [startMilliseconds, durationMilliseconds]
+                    intro: [0, 10000], // 0s to 10s
+                    verse: [10000, 15000], // 10s to 25s
+                    chorus: [25000, 15000], // 25s to 40s
+                    outro: [40000, 10000] // 40s to 50s
+                },
+                html5: true // Use HTML5 Audio to handle larger files
+            });
+    
+            // Attach event listeners to all buttons
+            document.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const sprite = btn.getAttribute('data-sprite');
+                    music.play(sprite);
+                });
+            });
+        </script>
     </div>
 </body>
 </html>
