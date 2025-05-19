@@ -1,84 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barebones Music Theme Player</title>
-    <!-- Howler.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <style>
-        /* Bearbones music-themed styling */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1e1e1e, #3f3f3f);
-            color: #fff;
-            font-family: sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Theme Player Popup</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #1e1e1e, #2e2e2e);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        h1 {
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #00c853;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
 
-        .buttons {
-            display: flex;
-            gap: 1rem;
-        }
+    button:hover {
+      background: #00b347;
+    }
 
-        button {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 4px;
-            background: #ff4081;
-            color: #fff;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
 
-        button:hover {
-            background: #e73370;
-        }
-    </style>
+    .modal-content {
+      background: #222;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Music Sprite Player</h1>
-    <div class="buttons">
-        <button data-sprite="intro">Intro</button>
-        <button data-sprite="verse">Verse</button>
-        <button data-sprite="chorus">Chorus</button>
-        <button data-sprite="outro">Outro</button>
+
+  <h1>Music Theme Player</h1>
+  <button id="openModal">Open Theme Player</button>
+
+  <div id="themeModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Theme Player</h2>
+      <button id="playAndClose">Play Theme</button>
     </div>
+  </div>
 
-    <script>
-        // Initialize Howler with audio sprite definitions
-        const music = new Howl({
-            src: ['audio/obsidian.ogg'], // Place your audio file in an 'audio' folder
-            sprite: {
-                // spriteName: [startMilliseconds, durationMilliseconds]
-                intro: [0, 10000], // 0s to 10s
-                verse: [10000, 15000], // 10s to 25s
-                chorus: [25000, 15000], // 25s to 40s
-                outro: [40000, 10000] // 40s to 50s
-            },
-            html5: true // Use HTML5 Audio to handle larger files
-        });
+  <script>
+    // Load Howler with audio sprites
+    const music = new Howl({
+      src: ['audio/music.mp3'], // Make sure this path is correct and the file is in /audio/
+      sprite: {
+        intro: [0, 10000], // example: 0s–10s
+        // Add more sections if needed
+      },
+      html5: true,
+      volume: 1
+    });
 
-        // Attach event listeners to all buttons
-        document.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const sprite = btn.getAttribute('data-sprite');
-                music.play(sprite);
-            });
-        });
-    </script>
+    // Modal logic
+    const openBtn = document.getElementById('openModal');
+    const modal = document.getElementById('themeModal');
+    const playAndCloseBtn = document.getElementById('playAndClose');
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    playAndCloseBtn.addEventListener('click', () => {
+      const id = music.play('intro'); // or 'theme' if you have that sprite
+      music.fade(0, 1, 2000, id); // fade in over 2 seconds
+      modal.classList.add('hidden');
+    });
+  </script>
+
 </body>
-
 </html>
