@@ -59,18 +59,16 @@
   <script>
     const music = new Howl({
       src: ['audio/obsidian.ogg'],
-      sprite: {
-        intro: [0, 200000],
-      },
       html5: true,
-      volume: 1
+      volume: 1,
+      loop: true
     });
 
     const modal = document.getElementById('themeModal');
 
     // Wait for first user interaction
     function startTheme() {
-      const id = music.play('intro');
+      const id = music.play();
       music.fade(0, 1, 2000, id);
       modal.classList.add('hidden');
       document.body.removeEventListener('click', startTheme); // only run once
