@@ -1,177 +1,84 @@
-<!-- l'index servira également comme ma biographie -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Biographie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barebones Music Theme Player</title>
     <!-- Howler.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <a name="Haut"></a>
-    <div class="collant">
-        <h1>Biographie</h1>
-        <h3>Daniel Ghaby</h3>
-        <ul class="menu">
-            <li class="menu"><a class="menu" href="#Haut">Haut</a></li>
-            <li class="menu"><a class="menu" href="index.html">Biographie</a></li>
-            <li class="menu"><a class="menu" href="poeme.html">Mon Poème</a></li>
-            <li class="menu"><a class="menu" href="voyage.html">Voyage Parfait</a></li>
-        </ul>
-    </div>
-        <!-- une description et introduction à ma page web, le tout est encadré dans une boîte -->
-    <div class="box" style="left: 10px; width: 70%; top:180px;">
-        <p style="color: white;">
-            Mon nom est Daniel Ghaby et j'aime les systèmes de transport public. C'est pourquoi mon site web s'appelle 
-            <a style="color: #8F8773" href="https://61zFan.github.io">61zFan</a>. Je ne sais pas pourquoi, mais ça me passionne beaucoup.<br><br>
-            
-            De plus, je suis musicien et compositeur. Je joue du trombone et du piano à un niveau intermédiaire. J'ai compétitionné internationalement dans des compétitions de cube Rubik. (à voir, ci-dessous)<br><br>
-            
-            Aussi, je suis raisonnablement actif. Je suis notamment fier de ma course. Dans la compétition de cross-country 6 km, je suis fier de mon temps de 
-            <a style="color: #8F8773" href="https://dcc344ca-ec70-45b8-857b-55d92ad73f87.usrfiles.com/ugd/dcc344_0889cc7c53f3401689a052a9c8d7b71b.pdf" target="_blank">00:22:15,20</a>.<br><br>
-        </p>
-    </div>
-    
-    <div class="border" style="right:10px;">
-        <img src="https://i.imgur.com/yFO2pJt.jpeg" alt="Daniel qui se tient debout heureusement devant le STADLER FLIRT qui est utilisé sur la ligne 2 en Ottawa" width="200" />
-    </div>
-    
-    <!-- les 6 prochaines lignes ont été générées par https://iframely.com/try -->
-    <div class="iframely-embed">
-        <div class="iframely-responsive" style="width: 250px; margin-right: 20px; margin-top: 700px">
-            <a href="https://www.worldcubeassociation.org/persons/2023GHAB01" data-iframely-url="//iframely.net/mmWExxA?card=small"></a>
-        </div>
-    </div>
-    <script async src="//iframely.net/embed.js"></script>
+<!--    <style>
+        /* Bearbones music-themed styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e1e, #3f3f3f);
+            color: #fff;
+            font-family: sans-serif;
+        }
 
-        <!-- Dans mon tableau de compétences technologiques (la technologie est un mot général), j'ai utilisé des emojis de transport en commun pour symbolser les différents niveaux
-                les débutants sonts représenté par un bus; les intermédiaire par un trolleybus; les experts par un métro léger et finallement le niveau maitre par un enseignant -->
-    <div class="table">
-        <table border="5px">
-            <thead>
-                <tr>
-                    <th>Abilité</th>
-                    <th>Maître</th>
-                    <th>Expert</th>
-                    <th>Intermédiaire</th>
-                    <th>Débutant</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>HTML</td>
-                    <td></td>
-                    <td></td>
-                    <td>&#128654;</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td></td>
-                    <td></td>
-                    <td>&#128654;</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>&#128653;</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>&#128653;</td>
-                </tr>
-                <tr>
-                    <td>Composition</td>
-                    <td></td>
-                    <td>&#128649;</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Design</td>
-                    <td></td>
-                    <td>&#128649;</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Poste Canada</td>
-                    <td>🧑‍🏫</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div>
-        <h1>Calculatrice modulo %</h1>
-        <form>
-            <label for="input1"> Premier nombre :</label>
-            <input id="input1" type=text></input>
-            <label for="input2">Deuxième nombre :</label>
-            <input id="input2" type=text></input>
-            <input type="button" id="btnSoumet" onclick="confirmeInscription()"  value="Calculer modulo">
-            <div id="divAffiche">
-                
-            </div>
-            <script>
-                var nombre1
-                var nombre2
-                function confirmeInscription() {
-                    nombre1 = parseInt(document.getElementById("input1").value)
-                    nombre2 = parseInt(document.getElementById("input2").value)
-                    
-                    var affiche = document.getElementById("divAffiche");
-                   
-                    //Construire le message à afficher
-                    var message = "<br><br>" + nombre1 + " % " + nombre2 + " = " + (nombre1%nombre2);
-                    
-                    //Afficher le message sur la page web
-                    affiche.innerHTML = message;
-                    return
-                }
-                console.log(nombre1, nombre2)
-            </script>
-        </form>
-    </div>
-    <div>
-            <h1>Music Sprite Player</h1>
+        h1 {
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            background: #ff4081;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #e73370;
+        }
+    </style> -->
+</head>
+
+<body>
+    <h1>Music Sprite Player</h1>
     <div class="buttons">
         <button data-sprite="intro">Intro</button>
         <button data-sprite="verse">Verse</button>
         <button data-sprite="chorus">Chorus</button>
         <button data-sprite="outro">Outro</button>
-    </div class="player">
-        <script>
-            // Initialize Howler with audio sprite definitions
-            const music = new Howl({
-                src: ['audio/music.mp3'], // Place your audio file in an 'audio' folder
-                sprite: {
-                    // spriteName: [startMilliseconds, durationMilliseconds]
-                    intro: [0, 10000], // 0s to 10s
-                    verse: [10000, 15000], // 10s to 25s
-                    chorus: [25000, 15000], // 25s to 40s
-                    outro: [40000, 10000] // 40s to 50s
-                },
-                html5: true // Use HTML5 Audio to handle larger files
-            });
-    
-            // Attach event listeners to all buttons
-            document.querySelectorAll('button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const sprite = btn.getAttribute('data-sprite');
-                    music.play(sprite);
-                });
-            });
-        </script>
     </div>
+
+    <script>
+        // Initialize Howler with audio sprite definitions
+        const music = new Howl({
+            src: ['audio/music.mp3'], // Place your audio file in an 'audio' folder
+            sprite: {
+                // spriteName: [startMilliseconds, durationMilliseconds]
+                intro: [0, 10000], // 0s to 10s
+                verse: [10000, 15000], // 10s to 25s
+                chorus: [25000, 15000], // 25s to 40s
+                outro: [40000, 10000] // 40s to 50s
+            },
+            html5: true // Use HTML5 Audio to handle larger files
+        });
+
+        // Attach event listeners to all buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const sprite = btn.getAttribute('data-sprite');
+                music.play(sprite);
+            });
+        });
+    </script>
 </body>
+
 </html>
