@@ -16,21 +16,8 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-    }
-
-    button {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      background: #00c853;
-      color: white;
+      user-select: none;
       cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    button:hover {
-      background: #00b347;
     }
 
     .modal {
@@ -62,42 +49,34 @@
 <body>
 
   <h1>Music Theme Player</h1>
-  <button id="openModal">Open Theme Player</button>
 
-  <div id="themeModal" class="modal hidden">
+  <div id="themeModal" class="modal">
     <div class="modal-content">
-      <h2>Theme Player</h2>
-      <button id="playAndClose">Play Theme</button>
+      <h2>Click anywhere to play the theme</h2>
     </div>
   </div>
 
   <script>
-    // Load Howler with audio sprites
     const music = new Howl({
-      src: ['audio/music.mp3'], // Make sure this path is correct and the file is in /audio/
+      src: ['audio/music.mp3'],
       sprite: {
-        intro: [0, 10000], // example: 0s–10s
-        // Add more sections if needed
+        intro: [0, 10000],
       },
       html5: true,
       volume: 1
     });
 
-    // Modal logic
-    const openBtn = document.getElementById('openModal');
     const modal = document.getElementById('themeModal');
-    const playAndCloseBtn = document.getElementById('playAndClose');
 
-    // Automatically open modal when page loads
-    window.addEventListener('DOMContentLoaded', () => {
-      modal.classList.remove('hidden');
-    });
-
-    playAndCloseBtn.addEventListener('click', () => {
-      const id = music.play('intro'); // or 'theme' if you have that sprite
-      music.fade(0, 1, 2000, id); // fade in over 2 seconds
+    // Wait for first user interaction
+    function startTheme() {
+      const id = music.play('intro');
+      music.fade(0, 1, 2000, id);
       modal.classList.add('hidden');
-    });
+      document.body.removeEventListener('click', startTheme); // only run once
+    }
+
+    document.body.addEventListener('click', startTheme);
   </script>
 
 </body>
