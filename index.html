@@ -1,81 +1,169 @@
+<!-- l'index servira également comme ma biographie -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Theme Player Popup</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(to right, #1e1e1e, #2e2e2e);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      user-select: none;
-      cursor: pointer;
-    }
+<a name="Haut"></a>
+<meta charset="utf-8">
+<title>Biographie</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  #themeModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
 
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-    }
+  #themeModal .modal-content {
+    background: #222;
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }
 
-    .modal-content {
-      background: #222;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      color: white;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+  #themeModal.hidden {
+    display: none;
+  }
+</style>
 </head>
 <body>
+<div class="collant">
+<h1>Biographie</h1>
+<h3>Daniel Ghaby</h3>
+<ul class="menu">
+<li class="menu"><a class="menu" href="#Haut">Haut</a></li>
+<li class="menu"><a class="menu" href="index.html">Biographie</a></li>
+<li class="menu"><a class="menu" href="poeme.html">Mon Poème</a></li>
+<li class="menu"><a class="menu" href="voyage.html">Voyage Parfait</a></li>
+</ul>
+</div>
+    
+        <!-- une description et introduction à ma page web, le tout est encadré dans une boîte -->
+<div class="box" style="left: 10px; width: 70%; top:180px;">
+<p style="color: white;">
+Mon nom est Daniel Ghaby et j'aime les systèmes de transport public. C'est pourquoi mon site web s'appelle 
+<a style="color: #8F8773" href="https://61zFan.github.io">61zFan</a>. Je ne sais pas pourquoi, mais ça me passionne beaucoup.<br><br>
 
-  <h1>Music Theme Player</h1>
+De plus, je suis musicien et compositeur. Je joue du trombone et du piano à un niveau intermédiaire. J'ai compétitionné internationalement dans des compétitions de cube Rubik. (à voir, ci-dessous)<br><br>
 
-  <div id="themeModal" class="modal">
-    <div class="modal-content">
-      <h2>Click anywhere to play the theme</h2>
-    </div>
+Aussi, je suis raisonnablement actif. Je suis notamment fier de ma course. Dans la compétition de cross-country 6 km, je suis fier de mon temps de 
+<a style="color: #8F8773" href="https://dcc344ca-ec70-45b8-857b-55d92ad73f87.usrfiles.com/ugd/dcc344_0889cc7c53f3401689a052a9c8d7b71b.pdf" target="_blank">00:22:15,20</a>.<br><br>
+</p>
+</div>
+
+<div class="border" style="right:10px;">
+<img src="https://i.imgur.com/yFO2pJt.jpeg" alt="Daniel qui se tient debout heureusement devant le STADLER FLIRT qui est utilisé sur la ligne 2 en Ottawa" width="200" />
+</div>
+
+<!-- les 6 prochaines lignes ont été générées par https://iframely.com/try -->
+<div class="iframely-embed">
+<div class="iframely-responsive" style="width: 250px; margin-right: 20px; margin-top: 700px">
+<a href="https://www.worldcubeassociation.org/persons/2023GHAB01" data-iframely-url="//iframely.net/mmWExxA?card=small"></a>
+</div>
+</div>
+<script async src="//iframely.net/embed.js"></script>
+    
+
+        <!-- Dans mon tableau de compétences technologiques (la technologie est un mot général), j'ai utilisé des emojis de transport en commun pour symbolser les différents niveaux
+                les débutants sonts représenté par un bus; les intermédiaire par un trolleybus; les experts par un métro léger et finallement le niveau maitre par un enseignant -->
+<div class="table">
+<table border="5px">
+<thead>
+<tr>
+<th>Abilité</th>
+<th>Maître</th>
+<th>Expert</th>
+<th>Intermédiaire</th>
+<th>Débutant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td></td>
+<td></td>
+<td>&#128654;</td>
+<td></td>
+</tr>
+<tr>
+<td>CSS</td>
+<td></td>
+<td></td>
+<td>&#128654;</td>
+<td></td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td></td>
+<td></td>
+<td></td>
+<td>&#128653;</td>
+</tr>
+<tr>
+<td>Python</td>
+<td></td>
+<td></td>
+<td></td>
+<td>&#128653;</td>
+</tr>
+<tr>
+<td>Composition</td>
+<td></td>
+<td>&#128649;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Design</td>
+<td></td>
+<td>&#128649;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Poste Canada</td>
+<td>🧑‍🏫</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="themeModal" class="modal">
+  <div class="modal-content">
+    <h2>Click anywhere to play the theme</h2>
   </div>
+</div>
+<script>
+  const themeModal = document.getElementById('themeModal');
 
-  <script>
-    const music = new Howl({
-      src: ['audio/obsidian.ogg'],
-      html5: true,
-      volume: 1,
-      loop: true
-    });
+  const themeMusic = new Howl({
+    src: ['audio/obsidian.mp3'], // change path if needed
+    volume: 1,
+    html5: true,
+    loop: true
+  });
 
-    const modal = document.getElementById('themeModal');
+  function startTheme() {
+    const id = themeMusic.play();
+    themeMusic.fade(0, 1, 2000, id);
+    themeModal.classList.add('hidden');
+    document.body.removeEventListener('click', startTheme);
+  }
 
-    // Wait for first user interaction
-    function startTheme() {
-      const id = music.play();
-      music.fade(0, 1, 2000, id);
-      modal.classList.add('hidden');
-      document.body.removeEventListener('click', startTheme); // only run once
-    }
-
+  window.addEventListener('DOMContentLoaded', () => {
+    themeModal.classList.remove('hidden');
     document.body.addEventListener('click', startTheme);
-  </script>
-
+  });
+</script>  
 </body>
 </html>
