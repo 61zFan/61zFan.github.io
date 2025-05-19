@@ -1,11 +1,10 @@
 function setupAudio() {
-  //theme
   const musicAudio = new Howl({
-    src: ['starwars_naboo_suite.mp3'], 
+    src: ['starwars_naboo_suite.mp3'],
+    html5: true,
     autoplay: true,
-    loop: true,
+    loop: true
   });
   musicAudio.play();
 }
 window.setupAudio = setupAudio;
-
