@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="howler.min.js"></script>
     <script defer src="audio-manager.js"></script>
-    <script defer> setupAudio(); </script>
+    <script>
+      // call on first user interaction
+      document.addEventListener('click', () => {
+        setupAudio();
+      }, { once: true });
+    </script>
 </head>
 <body>
     <a name="Haut"></a>
